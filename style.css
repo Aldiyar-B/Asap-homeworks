@@ -60,9 +60,11 @@ a {
 	text-align: right;
 }
 .container {
-	width: 940px;
+	width: 100%;
+	max-width: 940px;
 	margin: auto;
 }
+
 .paragraph {
 }
 .small-paragraph {
@@ -86,6 +88,11 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	gap: 14px;
+}
+
+.menu li:hover {
+	text-decoration: underline;
+	color: #6e38f7;
 }
 
 /* BODY -----------------------------------------------------> */
@@ -204,6 +211,11 @@ a {
 .posts__card-img {
 }
 .posts__card-img img {
+	max-width: 440px;
+	height: 270px;
+	object-fit: cover;
+}
+.posts__card-img img {
 	width: 440px;
 	height: 270px;
 	object-fit: cover;
@@ -231,10 +243,72 @@ a {
 .footer {
 	height: 64px;
 	margin-top: 100px;
-	display: flex;
+	/* display: flex; */
 	justify-content: center;
 	align-items: center;
 }
 
 .footer p {
+}
+
+/* МЕДИАЗАПРОСЫ */
+
+/* Media Queries */
+
+/* Мобилки */
+@media (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+
+	.container {
+		width: 288px;
+		margin: auto;
+	}
+	.kotik {
+		display: block;
+		flex-direction: column;
+	}
+
+	.kotik-info {
+	}
+	.kotik-title {
+		margin-top: 54px;
+	}
+	.kotik-text {
+		margin-top: 15px;
+		margin-bottom: 30px;
+	}
+	.kotik-img {
+		max-width: 288px;
+		max-height: 413px;
+		margin-top: 27px;
+	}
+
+	.skills {
+		margin-bottom: 100px;
+	}
+	.posts h2 {
+		margin-bottom: 20px;
+	}
+
+	.posts__card {
+		display: block;
+	}
+	.posts__card-img {
+		margin-bottom: 17px;
+	}
+	.posts__card-img img {
+		max-width: 288px;
+		height: 270px;
+		object-fit: cover;
+	}
+}
+
+/* Пейзажные планшеты */
+@media (max-width: 1024px) {
+}
+
+/* Настольные компьютеры и большие экраны */
+@media (max-width: 1280px) {
 }
